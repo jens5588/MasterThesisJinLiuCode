@@ -1,0 +1,30 @@
+{
+  "inputfilepath": "Data/preprocessed price.csv",
+  "label": ["price difference"],
+  "features": ["Hour", "Weekday", "Holiday", "Demand","price estimator Model","PV Prediction",
+              "Wind Prediction", "NTC NET", "daily temperature",
+              "Price Gas","Price Hard Coal","Price Oil","Price CO2",
+              "price difference t_24", "price difference t_48", "price difference t_72",
+              "price difference t_96", "price difference t_120", "price difference t_144",
+              "price difference t_168", "price difference t_336", "price difference t_504"],
+  "predictionbegin": "2018-01-01",
+  "validationdays": 5,
+  "testdays": 1,
+  "daystopredict": 365,
+  "runtimes": 1,
+  "verbose": 0,
+  "hyperparameters": {
+    "daydiscretization": [0],
+    "lookbackyears": [3],
+    "trainingdayscurrent": [49],
+    "trainingdaysprevious": [49],
+    "n_insteps": [24],
+    "n_outsteps": [24],
+    "scaler":["MinMaxScaler"],
+    "hiddenunits": [64],
+    "activation": ["linear"],
+    "patience": [500],
+    "epochs": [40000],
+    "batchsize": [256]
+ }
+}

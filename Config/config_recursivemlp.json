@@ -1,0 +1,71 @@
+{
+  "inputfilepath": "Data/preprocessed price.csv",
+  "features": [
+      "Hour",
+      "Weekday",
+      "Holiday",
+      "daily temperature",
+      "price estimator Model",
+      "Demand",
+      "PV Prediction",
+      "Wind Prediction",
+      "NTC NET",
+      "Price CO2",
+      "Price Gas",
+      "Price Hard Coal",
+      "Price Oil",
+      "price difference t_24",
+      "price difference t_48",
+      "price difference t_72",
+      "price difference t_96",
+      "price difference t_120",
+      "price difference t_144",
+      "price difference t_168",
+      "price difference t_336",
+      "price difference t_504"
+  ],
+  "featurenumber": 28,
+  "daystopredict": 365,
+  "predictionbegin": "2018-01-01",
+  "validationdays": 5,
+  "testdays": 1,
+  "runtimes": 1,
+  "verbose": 0,
+  "hyperparameters": {
+    "lags": [6
+    ],
+    "lookbackyears": [
+      3
+    ],
+    "trainingdayscurrent": [
+      49
+    ],
+    "trainingdaysprevious": [
+      49
+    ],
+    "featureselection": [
+      "None"
+    ],
+    "scaler": [
+      "MinMaxScaler"
+    ],
+    "hiddenlayersizes": [
+      [64,64,64,64]
+    ],
+    "dropout": [
+      0
+    ],
+    "activation": [
+      "sigmoid"
+    ],
+    "patience": [
+      2000
+    ],
+    "epochs": [
+      40000
+    ],
+    "batchsize": [
+      256
+    ]
+  }
+}
